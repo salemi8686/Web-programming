@@ -40,3 +40,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+node_modules
+lab5 - Angular/MyProject/src/app
