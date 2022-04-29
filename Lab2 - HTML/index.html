@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>My first web page</title>
+    <style>
+        .me {
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            border: 2px sandybrown;
+        }
+        
+        .tab {
+            text-align: center;
+            position: relative;
+            margin: 6px;
+            padding: 10px auto;
+            border: 1px thistle;
+            background-color: aquamarine;
+            height: 150px;
+            width: 450px;
+        }
+        
+        ul input {
+            position: auto;
+            margin: 13px;
+            border: 1px red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello world</h1>
+    <div class="me"> <input type="text" placeholder="type your favorite footballer name..." class="in"><button class="add">Save</button> </div>
+
+    <div class="wrapper">
+        <ul class="todo">
+
+        </ul>
+    </div>
+
+
+    <script>
+        let addMessage = document.querySelector('.in'),
+            addButton = document.querySelector('.add'),
+
+            todo = document.querySelector('.todo')
+        let todoList = [];
+        addButton.addEventListener('click', function() {
+            let newToDo = {
+                todo: addMessage.value,
+                checked: false,
+                important: false
+            }
+            todoList.push(newToDo);
+            displayMessages();
+        });
+
+        function displayMessages() {
+            todoList.forEach(function(item, i) {
+                let displayMessage =
+            });
+        }
+    </script>
+</body>
+
+</html>

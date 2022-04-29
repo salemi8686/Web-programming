@@ -1,0 +1,9 @@
+.cat-item {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cat {
+    display: inline-table;
+    vertical-align: super;
+}

@@ -1,0 +1,60 @@
+<p>Hello</p>
+<div class="my" *ngIf="category && category.id==1">
+    <h1 style="margin: 5px; border: 3px solid gold; background-color: blueviolet; font-weight: bold;">All dresses in this category</h1>
+    <div class="cat" *ngFor="let dress of dresses" style="margin-left: 45px; margin-top: 20px;">
+        <div class="cat-item" style="padding-left:5px;padding-top:0px; padding-bottom:px;background-color: white; width: 260px; height: 400px;">
+            <a href=""><img src='{{dress.img}}' alt=" " style="width: 260px; height:280px; "></a><br>
+            <p style="font-size: 18px; font-weight: bold;font-family:Arial, Helvetica, sans-serif;border-top: 1px solid;">{{dress.description}}</p>
+            <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;">{{dress.price}}$</p>
+            <button (click)="remove(dress,category.id)">Delete</button>
+            <button class="btn-secondary like-review" (click)="myfunc(dress)">
+                <i class="fa fa-heart" aria-hidden="true"></i> Like: {{dress.likes}}
+              </button>
+        </div>
+    </div>
+</div>
+
+<div class="my" *ngIf="category && category.id==2">
+    <h1 style="margin: 5px; border: 3px solid gold; background-color: blueviolet; font-weight: bold;">All Health & Personal Care in this category</h1>
+    <div class="cat" *ngFor="let health of healthes" style="margin-left: 45px; margin-top: 20px;">
+        <div class="cat-item" style="padding-left:5px;padding-top:0px; padding-bottom:px;background-color: white; width: 260px;">
+            <a href=""><img src='{{health.img}}' alt=" " style="width: 260px; height:280px; "></a><br>
+            <p style="font-size: 18px; font-weight: bold;font-family:Arial, Helvetica, sans-serif;border-top: 1px solid;">{{health.description}}</p>
+            <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;">{{health.price}}$</p>
+            <button (click)="remove(health,category.id)">Delete</button>
+            <button class="btn-secondary like-review" (click)="myfunc(health)">
+                <i class="fa fa-heart" aria-hidden="true"></i> Like: {{health.likes}}
+              </button>
+        </div>
+    </div>
+</div>
+
+<div class="my" *ngIf="category && category.id==3">
+    <h1 style="margin: 5px; border: 3px solid gold; background-color: blueviolet; font-weight: bold;">All Beauty picks in this category</h1>
+    <div class="cat" *ngFor="let pick of picks" style="margin-left: 45px; margin-top: 20px;">
+        <div class="cat-item" style="padding-left:5px;padding-top:0px; padding-bottom:px;background-color: white; width: 260px;">
+            <a href=""><img src='{{pick.img}}' alt=" " style="width: 260px; height:280px; "></a><br>
+            <p style="font-size: 18px; font-weight: bold;font-family:Arial, Helvetica, sans-serif;border-top: 1px solid;">{{pick.description}}</p>
+            <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;">{{pick.price}}$</p>
+            <button (click)="remove(pick,category.id)">Delete</button>
+            <button class="btn-secondary like-review" (click)="myfunc(pick)">
+                <i class="fa fa-heart" aria-hidden="true"></i> Like: {{pick.likes}}
+              </button>
+        </div>
+    </div>
+</div>
+
+<div class="my" *ngIf="category && category.id==4">
+    <h1 style="margin: 5px; border: 3px solid gold; background-color: blueviolet; font-weight: bold;">All childrens toys in this category</h1>
+    <div class="cat" *ngFor="let toy of toys" style="margin-left: 45px; margin-top: 20px;">
+        <div class="cat-item" style="padding-left:5px;padding-top:0px; padding-bottom:px;background-color: white; width: 260px;">
+            <a href=""><img src='{{toy.img}}' alt=" " style="width: 260px; height:280px; "></a><br>
+            <p style="font-size: 18px; font-weight: bold;font-family:Arial, Helvetica, sans-serif;border-top: 1px solid;">{{toy.description}}</p>
+            <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;">{{toy.price}}$</p>
+            <button (click)="remove(toy,category.id)">Delete</button>
+            <button class="btn-secondary like-review" (click)="myfunc(toy)">
+                <i class="fa fa-heart" aria-hidden="true"></i> Like: {{toy.likes}}
+              </button>
+        </div>
+    </div>
+</div>
